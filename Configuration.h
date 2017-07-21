@@ -337,7 +337,7 @@
 
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
-#define BANG_MAX 255 // limits current to nozzle while in bang-bang mode; 255=full current
+#define BANG_MAX 150 // limits current to nozzle while in bang-bang mode; 255=full current
 #define PID_MAX BANG_MAX // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #if ENABLED(PIDTEMP)
   //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
@@ -368,9 +368,9 @@
   //#define  DEFAULT_Kd 440
 
   // Vellemann K8200 Extruder - calculated with PID Autotune and tested
-  #define  DEFAULT_Kp 24.29
-  #define  DEFAULT_Ki 1.58
-  #define  DEFAULT_Kd 93.51
+  #define  DEFAULT_Kp 10.98
+  #define  DEFAULT_Ki 0.81
+  #define  DEFAULT_Kd 37.25
 #endif // PIDTEMP
 
 //===========================================================================
@@ -536,13 +536,13 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 64.25, 64.25, 2560, 600 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 64.25, 64.25, 2133.33, 682 }
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 500 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -572,8 +572,8 @@
  * When changing speed and direction, if the difference is less than the
  * value set here, it may happen instantaneously.
  */
-#define DEFAULT_XJERK                 20.0
-#define DEFAULT_YJERK                 20.0
+#define DEFAULT_XJERK                 8.0
+#define DEFAULT_YJERK                 8.0
 #define DEFAULT_ZJERK                  0.4
 #define DEFAULT_EJERK                  5.0
 
@@ -761,7 +761,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true // K8200: true for geared default extruder!
+#define INVERT_E0_DIR false // K8200: new belt
 #define INVERT_E1_DIR true
 #define INVERT_E2_DIR true
 #define INVERT_E3_DIR true
