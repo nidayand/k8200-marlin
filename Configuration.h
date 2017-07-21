@@ -49,7 +49,7 @@
  */
 
 // VM8201 Display unit
-#define K8200_VM8201
+// #define K8200_VM8201
 // K8204 Z axis upgrade rod and coupler -> TODO
 // #define K8200_K8204
 // K8203 direct drive extruder -> TODO
