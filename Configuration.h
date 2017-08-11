@@ -415,9 +415,9 @@
 
     // Vellemann K8200 PCB heatbed with standard PCU at 60 degreesC - calculated with PID Autotune and tested
     // from pidautotune
-    #define  DEFAULT_bedKp 341.88
-    #define  DEFAULT_bedKi 25.32
-    #define  DEFAULT_bedKd 1153.89
+    #define  DEFAULT_bedKp 230.71
+    #define  DEFAULT_bedKi 17.49
+    #define  DEFAULT_bedKd 760.70
 #endif // PIDTEMPBED
 
 // @section extruder
